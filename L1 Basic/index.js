@@ -29,7 +29,7 @@ setTimeout(() => {
     },1000)
 }, 1000)
 
-                                              //Tpoic: promises
+                                              //Topic: promises
   const myPromises = new Promise((resolve,reject) =>{
     username = "Dev"
     password = "1234"
@@ -41,14 +41,14 @@ setTimeout(() => {
         reject("incorrect details")
     }
   })   
-     // handle the response 
-//   myPromises.then((msg) =>{
-//     console.log(msg)
-//   }).catch((msg) =>{
-//     console.log(msg)
-//   }).finally(() =>{
-//     console.log("all resources are closed")
-//   })
+     //handle the response 
+  myPromises.then((msg) =>{
+    console.log(msg)
+  }).catch((msg) =>{
+    console.log(msg)
+  }).finally(() =>{
+    console.log("all resources are closed")
+  })
     // another method to handle the response
 async function handleLogin() {
     try{
