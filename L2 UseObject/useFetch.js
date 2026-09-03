@@ -5,9 +5,8 @@ const h2 = document.createElement('h2');
 h2.innerText = "Learn JS";
 
 async function display() {
-
     try {
-
+        // Loading text
         div.appendChild(h2);
 
         const serverdata = await fetch('https://fakestoreapi.com/products');
@@ -19,13 +18,13 @@ async function display() {
                     <th>Item_Image</th>
                     <th>Item_Id</th>
                     <th>Item_Title</th>
-                    <th>Item_price</th>
+                    <th>Item_Price</th>
                 </tr>
 
                 ${jsondata.map((ele) => `
                     <tr>
                         <td>
-                            <img src="${ele.image}" height="200" width="200"/>
+                            <img src="${ele.image}" height="200" width="200">
                         </td>
                         <td>${ele.id}</td>
                         <td>${ele.title}</td>
@@ -38,12 +37,8 @@ async function display() {
 
         div.innerHTML = table;
 
-    } catch(e) {
+    } catch (e) {
         console.log(e);
-    }
-
-    finally {
-        div.removeChild(h2);
     }
 }
 
